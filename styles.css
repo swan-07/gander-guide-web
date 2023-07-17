@@ -111,6 +111,7 @@ section img{
 }
 
 .text{
+.text{
     position:absolute;
     color: #fff;
     white-space: nowrap;
@@ -118,6 +119,7 @@ section img{
     z-index: 150;
     text-align: center;
     transform: translateY(-100px);
+} 
 } 
 
 .goose{
@@ -383,7 +385,6 @@ section img{
     border-radius: 4px;
   }
   
-
   canvas {
     position: fixed;
     top: 0;
