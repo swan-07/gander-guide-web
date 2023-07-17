@@ -111,7 +111,6 @@ section img{
 }
 
 .text{
-.text{
     position:absolute;
     color: #fff;
     white-space: nowrap;
@@ -120,7 +119,7 @@ section img{
     text-align: center;
     transform: translateY(-100px);
 } 
-} 
+
 
 .goose{
     position: absolute;
