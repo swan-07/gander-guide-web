@@ -205,6 +205,12 @@ section img{
  }
 
  footer {
+    position: absolute;
+    z-index: 20000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: sticky;
     background-color: #3e235d;
     padding: 20px;
     text-align: center;
@@ -214,6 +220,7 @@ section img{
     margin: 0;
     color: white;
     padding: 10px;
+    z-index: 100000;
   }
 
 
