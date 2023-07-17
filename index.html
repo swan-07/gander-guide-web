@@ -1,36 +1,60 @@
 <!-- inspiration by https://www.youtube.com/watch?v=1wfeqDyMUx4 -->
+<!-- and fireship's 3js video <3 -->
 
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Gander Guide</title>
-  <link rel="icon" type="image" href="/icon.png" />
-  <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-  <header>
-    <a href="#" class="logo">Gleeful Geese</a>
-    <ul>
-      <li><a href="#" class="active">Home</a></li>
-      <li><a href="#app">App</a></li>
-      <li><a href="#sec">Process</a></li>
-      <li><a href="#about">About</a> </li>
-    </ul>
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>Gander Guide</title>
+    <link rel="icon" type="image" href="/icon.png" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Gleeful Geese</a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#app">App</a></li>
+        <li><a href="#sec">Process</a></li>
+        <li><a href="#about">About</a> </li>
+      </ul>
+  
+    </header>
+    
+    <section>
+      <img src="foreground.png" class="foreground" id="foreground">
+      <img src="background.png" class="background" id="background">
+      <img src="moon.png" class="moon" id="moon">
+      <img src="goose.png" class="goose" id="goose">
+      <h2 class="text" id="text">Gander Guide</h2>
+      <a href="#app" class="btn" id="btn">Test it out!</a>
+    </section>
+    
+    <div class="app" id="app">
+      <h3>Gander Guide</h3>
+  
+      <div class="wrapper">
+        <div class="custom-input">
+          <input type="radio" id="Human_View" name="option">
+          <label for="Human_View">Human View</label>
+        </div>
+        <div class="custom-input">
+          <input type="radio" id="Computer_View" name="option">
+          <label for="Computer_View">Computer View</label>
+        </div>
+      </div>
+  
+      <div class="video-container">
+        <video id="videoElement" autoplay></video>
+      </div>
+      
+    </div>
 
-  </header>
-  
-  <section>
-    <img src="foreground.png" class="foreground" id="foreground">
-    <img src="background.png" class="background" id="background">
-    <img src="moon.png" class="moon" id="moon">
-    <img src="goose.png" class="goose" id="goose">
-    <h2 id="text">Gander Guide</h2>
-    <a href="#app" class="btn" id="btn">Test it out!</a>
-  </section>
-  
-  <div class="app" id="app">
-    <h3>Gander Guide</h3>
-  </div>
+
+<main>
+    
+    <canvas id="bg"></canvas>
+
+  </main>
 
   <div class="sec" id="sec">
     <br><br>
@@ -46,41 +70,103 @@
       Aliquam augue ante, hendrerit quis justo id, laoreet tristique odio. Nam laoreet, urna non malesuada feugiat, urna quam elementum lacus, ut malesuada augue ante eget nibh. Curabitur pellentesque dictum maximus. Praesent vel neque interdum velit ornare finibus. Praesent quam justo, pulvinar et eros vel, molestie egestas nibh. Vestibulum imperdiet quam mi, quis vulputate turpis feugiat et. Praesent mauris dolor, euismod eu neque eget, egestas malesuada augue. In hac habitasse platea dictumst.</p>
   </div>
 
-  <div class="about" id="about">
-    <h3>About Us</h3>
-  </div>
+    <div class="about" id="about">
+      <h2>About Us</h2>
 
-  <script>
-    let foregound = document.getElementById('foreground');
-    let background = document.getElementById('background');
-    let moon = document.getElementById('moon');
-    let text = document.getElementById('text');
-    let btn = document.getElementById('btn');
-    let header = document.querySelector('header');
+      <div class="card-container">
+        <div class="card">
+          <!-- <img src="card-image4.jpg" alt="Card Image 4"> -->
+          <h3>Stephanie Wan</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="card">
+          <!-- <img src="card-image4.jpg" alt="Card Image 4"> -->
+          <h3>Alex Montello</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="card">
+          <!-- <img src="card-image4.jpg" alt="Card Image 4"> -->
+          <h3>Jacob Huser</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="card">
+          <!-- <img src="card-image4.jpg" alt="Card Image 4"> -->
+          <h3>Alan Joseph</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="card">
+          <!-- <img src="card-image4.jpg" alt="Card Image 4"> -->
+          <h3>Richard Vick</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="card">
+          <!-- <img src="card-image4.jpg" alt="Card Image 4"> -->
+          <h3>Kyle Wisnieski</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="card">
+          <!-- <img src="card-image4.jpg" alt="Card Image 4"> -->
+          <h3>Travis Smalling</h3>
+          <p>Mentor and Gamer</p>
+        </div>
+      </div>
+    </div>
+    
+    
 
-    window.addEventListener('scroll', function(){
-      let value = window.scrollY;
-      // moon.style.left = value*0.25 + 'px';
-      moon.style.top = value * 0.75 + 'px';
-      // background.style.top = background.style.top+value*0.5 + 'px';
-      // foreground.style.top =  value*0.25 + 'px';
-      text.style.marginLeft = value*4 + 'px';
-      btn.style.marginTop = value*0.5 + 'px';
-      // header.style.top = value*0.75 + 'px';
-    })
-  </script>
+    
+    
+    
+  </section>
+  
+  
 
-
-
-
-<footer>
-  <div class="footer-content">
-    <!-- Footer content goes here -->
-    <p>&copy; 2023 Made with love by Stephanie Wan. All rights reserved.</p>
-    <p>Contact us at example@gmail.com</p>
-  </div>
-  </div>
-</footer>
-</body>
-
-</html>
+  <script type="module" src="/main.js"></script>
+  
+  
+    <script>
+      let foregound = document.getElementById('foreground');
+      let background = document.getElementById('background');
+      let moon = document.getElementById('moon');
+      let text = document.getElementById('text');
+      let btn = document.getElementById('btn');
+      let header = document.querySelector('header');
+  
+      window.addEventListener('scroll', function(){
+        let value = window.scrollY;
+        // moon.style.left = value*0.25 + 'px';
+        moon.style.top = value * 0.75 + 'px';
+        // background.style.top = background.style.top+value*0.5 + 'px';
+        // foreground.style.top =  value*0.25 + 'px';
+        text.style.marginLeft = value*4 + 'px';
+        btn.style.marginTop = value*0.5 + 'px';
+        // header.style.top = value*0.75 + 'px';
+      })
+  
+      const video = document.getElementById('videoElement');
+  
+      // Get access to the camera video stream
+      navigator.mediaDevices.getUserMedia({ video: true })
+        .then((stream) => {
+          video.srcObject = stream;
+        })
+        .catch((error) => {
+          console.error('Error accessing the camera:', error);
+        });
+    </script>
+  
+  
+  
+  
+  <footer>
+    <div class="footer-content">
+      <!-- Footer content goes here -->
+      <p>&copy; 2023 Made with love by Stephanie Wan. All rights reserved.</p>
+      <p>Contact us at example@gmail.com</p>
+    </div>
+    </div>
+  </footer>
+  </body>
+  
+  </html>
+  

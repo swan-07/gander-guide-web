@@ -1,0 +1,11 @@
+Model Information:
+* title:	Goose Low Poly
+* source:	https://sketchfab.com/3d-models/goose-low-poly-3318893e41fc4d2f9f497776da95c13a
+* author:	Atlas (https://sketchfab.com/Atlasmodels)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Goose Low Poly" (https://sketchfab.com/3d-models/goose-low-poly-3318893e41fc4d2f9f497776da95c13a) by Atlas (https://sketchfab.com/Atlasmodels) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

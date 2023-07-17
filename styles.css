@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-family: 'Nunito', normal;
     scroll-behavior: smooth;
+    z-index: 1;
 }
 
 body {
@@ -82,7 +83,7 @@ section{
     width: 100%;
     height: auto;
     object-fit: cover;
-    z-index: 0;
+    z-index: 1;
 }
 
 
@@ -103,13 +104,13 @@ section img{
     left: 47%;
     width: 9vw;
     height: auto;
-    z-index: 1;
+    z-index: 2;
     /* -webkit-mask-image: radial-gradient(circle, black 45%, transparent 30%);
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center; */
 }
 
-h2{
+.text{
     position:absolute;
     color: #fff;
     white-space: nowrap;
@@ -117,7 +118,7 @@ h2{
     z-index: 150;
     text-align: center;
     transform: translateY(-100px);
-}
+} 
 
 .goose{
     position: absolute;
@@ -126,7 +127,7 @@ h2{
     width: 100%;
     height: auto;
     object-fit: cover;
-    z-index: 2;
+    z-index: 3;
 }
 
 .foreground {
@@ -184,21 +185,7 @@ h2{
     z-index: 100;
 }
 
-.about{
-    position: relative;
-    padding: 100px;
-    clear: both;
 
- }
- .about h3 {
-    color: white;
-    font-size: 3.5em;
-    margin-bottom: 10px;
- }
- .about p {
-    font-size: 1.2em;
-    color: white;
- }
 
  .app{
     position: relative;
@@ -226,4 +213,180 @@ h2{
     margin: 0;
     color: white;
     padding: 10px;
+  }
+
+
+
+  .about {
+    text-align: center;
+    position: relative;
+    padding:  100px;
+    clear: both;
+    
+  }
+
+  .about h2{
+    position: relative;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 10vw;
+    z-index: 150;
+    text-align: center;
+    transform: translateY(-100px);
+} 
+  
+  @media screen and (max-width: 600px) {
+    .card-row {
+    
+      /* width: 100%;
+      display: block;
+      margin-bottom: 20px; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+      
+  }
+  
+
+  
+  .card {
+    width: 300px;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 14px;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* Rounded shape */
+    margin-bottom: 10px;
+  }
+
+
+  .video-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    height: 100vh; /* Adjust as needed */
+  }
+  
+  .video-container video {
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 20%; /* Rounded shape */
+  }
+
+  .about {
+    text-align: center;
+    margin-bottom: 20px; /* Add margin-bottom to create space between "About Us" and cards */
+  }
+  
+  .about h2 {
+    position: relative;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 10vw;
+    z-index: 150;
+    text-align: center;
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    width: 300px;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.5);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+  
+  @media screen and (max-width: 800px) {
+    .card {
+      width: 100%;
+    }
+  }
+
+  .wrapper {
+    width: 50%;
+    display: flex;
+    padding: 4px;
+    background-color: #4b1055;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+  }
+  
+  .custom-input {
+    flex-grow: 1;
+    padding: 4px;
+  }
+  
+  .custom-input input[type=radio] {
+    display: none;
+  }
+  
+  .custom-input label {
+    
+    display: block;
+    padding: 6px 8px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    transition : all .4s 0s ease;
+  }
+  
+  .custom-input input[type=radio]:checked + label {
+    background-color: #f5f5f5;
+    color: #000;
+    border-radius: 4px;
+  }
+  .custom-input input[type=radio]:hover + label {
+    background-color: #f5f5f5;
+    color: #000;
+    border-radius: 4px;
+  }
+  
+
+  canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
   }
