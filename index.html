@@ -59,15 +59,20 @@
   <div class="sec" id="sec">
     <br><br>
     <h3>How It Works</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisis condimentum leo, quis ultrices neque tincidunt vel. Sed ac pulvinar libero, ut venenatis velit. Nunc eget finibus dolor, vel efficitur lacus. Curabitur quis ex interdum, maximus metus sit amet, efficitur nisl. Pellentesque pretium nisi volutpat sem mollis, sed rutrum ex aliquam. Suspendisse rutrum in massa ut consectetur. Vivamus lectus dolor, venenatis non magna non, posuere luctus ligula. In non dui vel risus interdum pulvinar. Sed pellentesque rutrum nunc sit amet fringilla. Vivamus posuere erat in ante dictum, eu lacinia mauris sodales. Ut vel dapibus nibh. Proin tellus nunc, dignissim tristique purus at, pharetra congue lectus. Nam suscipit felis tellus, ornare scelerisque nisi luctus ut. Quisque et lacinia tortor. In hac habitasse platea dictumst.
+    <p>
+      First, we explored potential 3D depth estimation models including Omni3D, Vision UFormer, and MiDaS. The most robust, reliable, and accessible option was MiDaS, so we began testing and researching relative depth maps. 
       <br><br>
-      Quisque varius vulputate nulla, vitae rutrum nisl maximus vitae. Praesent elementum urna et hendrerit dapibus. Nunc elit urna, lacinia in viverra eget, malesuada eu turpis. Integer fermentum tellus quis risus aliquet posuere. Donec luctus lacus in feugiat rhoncus. Aliquam erat volutpat. Proin facilisis euismod neque eu porttitor. Nam dui ligula, viverra ac venenatis eu, commodo sit amet nisi. Donec at cursus nisi. Praesent id viverra mauris.
+      The most clear path for the user is calculated using the most far away vertical area in the image, which is blurred and averaged to reduce noise, and the frame is searched for close and large obstructions using this depth map. 
       <br><br>
-      Vivamus convallis ante eu arcu vulputate semper. Nullam tempor luctus elit. Cras massa eros, varius et tincidunt non, finibus id mauris. Etiam ac dignissim metus. Cras lobortis iaculis justo ac fringilla. Suspendisse eget odio quam. Donec sit amet lorem fermentum leo lacinia hendrerit vel nec nibh. Nunc sit amet mauris sit amet nulla bibendum varius. In nec mattis lectus. Morbi porta blandit pellentesque. Etiam a ligula non lectus pretium suscipit aliquet non arcu. Suspendisse justo diam, consectetur quis ultrices sit amet, faucibus interdum est. Morbi vulputate ut dui sed fringilla. Fusce eu erat consequat, facilisis mauris sit amet, placerat nisi. Cras ac est eu sapien sodales euismod in at est. Curabitur luctus dolor ac ex pretium ullamcorper.
+      In addition to depth perception, we used SerpAPI to scrape Google for pictures of furniture, namely ottomans, sofas, chairs, wardrobes, beds, and tables. 
       <br><br>
-      Aenean justo nisl, fringilla id odio nec, rutrum pretium erat. Sed eleifend orci ut libero euismod, et malesuada nulla vestibulum. Maecenas pellentesque massa vel arcu luctus, a mollis magna tempus. Aliquam ut ipsum sem. In nec tellus a urna feugiat ullamcorper. Vivamus a purus nec magna pretium fringilla. Pellentesque urna nisl, blandit sed fringilla eu, faucibus eu sapien. Donec placerat commodo dapibus. Nunc eu mi convallis, tempor nibh tincidunt, aliquam sem. Proin auctor a enim ut semper.
+      We used a combination of intricate polygons and bounding boxes to label our images using Roboflow and used data augmentation methods like shearing, rotating, and adjusting brightness to correct for the phone's orientation and environment. 
       <br><br>
-      Aliquam augue ante, hendrerit quis justo id, laoreet tristique odio. Nam laoreet, urna non malesuada feugiat, urna quam elementum lacus, ut malesuada augue ante eget nibh. Curabitur pellentesque dictum maximus. Praesent vel neque interdum velit ornare finibus. Praesent quam justo, pulvinar et eros vel, molestie egestas nibh. Vestibulum imperdiet quam mi, quis vulputate turpis feugiat et. Praesent mauris dolor, euismod eu neque eget, egestas malesuada augue. In hac habitasse platea dictumst.</p>
+      Then, we trained a YOLO5 model on our dataset of over 4,500 images using Roboflow and Google Colab. After training, our model had an accuracy of __%.
+      <br><br>
+      Our mobile app was designed using Figma and developed using Flutter, and this website was created from scratch with js, html, css, three.js, and Vercel. 
+      <br><br>
+      Integrating furniture detection, depth estimation, and mobile accessibility yielded a robust and capable tool for assisting visually impaired or distracted users. 
   </div>
 
     <div class="about" id="about">
