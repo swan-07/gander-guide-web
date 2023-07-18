@@ -243,25 +243,32 @@ section img{
     transform: translateY(-100px);
 } 
 
-.demo h2{
+.demo{
   position: relative;
-  color: #fff;
-  white-space: nowrap;
-  font-size: 10vw;
-  z-index: 150;
+  padding: 100px;
+  clear: both;
+
+}
+.demo h2 {
   text-align: center;
-  transform: translateY(-100px);
-} 
+  color: white;
+  font-size: 3.5em;
+  margin-bottom: 10px;
+}
   
-.ad h2{
+.ad{
   position: relative;
-  color: #fff;
-  white-space: nowrap;
-  font-size: 10vw;
-  z-index: 150;
+  padding: 100px;
+  clear: both;
+
+}
+.ad h2 {
   text-align: center;
-  transform: translateY(-100px);
-} 
+  color: white;
+  font-size: 3.5em;
+  margin-bottom: 10px;
+}
+
   @media screen and (max-width: 600px) {
     .card-row {
     
@@ -316,7 +323,7 @@ section img{
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    height: 100vh; /* Adjust as needed */
+    margin-bottom: 50vh;
 
   }
   
