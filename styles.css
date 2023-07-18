@@ -242,7 +242,26 @@ section img{
     text-align: center;
     transform: translateY(-100px);
 } 
+
+.demo h2{
+  position: relative;
+  color: #fff;
+  white-space: nowrap;
+  font-size: 10vw;
+  z-index: 150;
+  text-align: center;
+  transform: translateY(-100px);
+} 
   
+.ad h2{
+  position: relative;
+  color: #fff;
+  white-space: nowrap;
+  font-size: 10vw;
+  z-index: 150;
+  text-align: center;
+  transform: translateY(-100px);
+} 
   @media screen and (max-width: 600px) {
     .card-row {
     

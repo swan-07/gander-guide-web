@@ -78,8 +78,8 @@ Array(400).fill().forEach(addStar)
 
 
 
-const moonTexture = new THREE.TextureLoader().load('moon.jpg');
-const normalTexture = new THREE.TextureLoader().load('normal.jpg')
+const moonTexture = new THREE.TextureLoader().load('./moon.jpg');
+const normalTexture = new THREE.TextureLoader().load('./normal.jpg')
 
 //Moon
 const moon = new THREE.Mesh(
